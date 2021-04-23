@@ -20,18 +20,23 @@
     width: 30%;
   }
   &:hover{
-    background:rgb(252, 252, 203);
+    background:rgb(245, 219, 219);
     transition: all 2;
   }
 }
 
 .song-description {
   padding-left: 1rem;
-  p:first-child {
+  p {
     font-size:1rem;
+    color: rgb(100,100,100)
   }
   p:last-child {
     padding-top: 0.5rem;
     font-size: 0.7rem;
   }
+}
+
+.selected {
+  background: rgb(230, 164, 164)
 }
