@@ -2,8 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  //ony in firefox
+  // scrollbar-width: thin;
+  // scrollbar-color: rgba(155,155,155,0.5);
+}
 
+*::-webkit-scrollbar{
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+  background: rgba(155, 155, 155, 0.5);
+  border-radius:20px;
+  border: transparent;
+}
+
+h1,h2,h3 {
+  color: rgb(54,54,54);
 }
 
 @import './song';
-@import './player'
+@import './player';
+@import './library'
