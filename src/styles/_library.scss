@@ -6,6 +6,9 @@
   height: 100%;
   box-shadow: 2px 2px 50px rgb(179, 179, 179);
   overflow: scroll;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
   h2 {
     padding: 2rem;
   }
@@ -21,7 +24,7 @@
   }
   &:hover{
     background:rgb(245, 219, 219);
-    transition: all 2;
+    transition: all .3s ease;
   }
 }
 
@@ -39,4 +42,9 @@
 
 .selected {
   background: rgb(230, 164, 164)
+}
+
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
 }
