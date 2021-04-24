@@ -1,9 +1,9 @@
-import { playAudio } from "../util";
 
 const LibrarySong = ({song, songs, id, setCurrentSong, isPlaying, audioRef, setSongs, active}) => {
-  const songSelectHandler = () => {
+  
+  const songSelectHandler = async () => {
     console.log(song);
-    setCurrentSong(song);
+    await setCurrentSong(song);
 //active state 
   const newSong = songs.map(song => {
     if(song.id === id) {
@@ -15,16 +15,16 @@ const LibrarySong = ({song, songs, id, setCurrentSong, isPlaying, audioRef, setS
     }
   })
   setSongs(newSong)
-    
+  if(isPlaying) audioRef.current.play()
 //cuando se cambia espera a que la cancion carge y la reproduce
-    if(isPlaying){
-      const playPromise = audioRef.current.play();
-      if(playPromise !== undefined){
-        playPromise.then((audio) => {
-          audioRef.current.play()
-        })
-      }
-    }
+    // if(isPlaying){
+    //   const playPromise = audioRef.current.play();
+    //   if(playPromise !== undefined){
+    //     playPromise.then((audio) => {
+    //       audioRef.current.play()
+    //     })
+    //   }
+    // }
   }
   return(
     <div onClick={songSelectHandler}  className={`library-song ${active ? "selected" : ""}`}>
