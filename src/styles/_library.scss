@@ -1,5 +1,6 @@
 .library {
   position: fixed;
+  background: white;
   top: 0;
   left: 0;
   width: 20rem;
@@ -47,4 +48,10 @@
 .active-library {
   transform: translateX(0%);
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
 }
